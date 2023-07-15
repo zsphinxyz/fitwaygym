@@ -1,5 +1,11 @@
 import Nav from './cmpnts/Nav';
+
 import about from './img/about.jpg';
+import f1 from './img/feature-1.jpg';
+import f2 from './img/feature-2.jpg';
+import f3 from './img/feature-3.jpg';
+import f4 from './img/feature-4.jpg';
+
 import {CgGym} from 'react-icons/cg/';
 import {GiWeightLiftingUp} from 'react-icons/gi/';
 import {GiMeal} from 'react-icons/gi/';
@@ -50,7 +56,7 @@ const Crew = ()=>{
             <p className='text-md md:text-lg text-slate-700'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, sapiente. </p>
           </div>
         </div>
-         <button className='!border-black btn block !bg-red-600 mx-auto max-w-[200px]'>Learn More</button>
+         <button className='btn block !bg-red-600 mx-auto max-w-[200px] hover:!bg-slate-900 hover:!text-white'>Learn More</button>
       </div>
     </div>
   )
@@ -58,7 +64,7 @@ const Crew = ()=>{
 
 const Three = () => {
   return(
-    <div className='flex flex-col justify-center items-center w-full text-gray-300 md:flex-row'>
+    <div className='flex flex-col justify-center py-5 md:py-20 my-2 md:my-8 items-center w-full md:h-96 text-gray-300 md:flex-row'>
       <div className="flex min-h-40 p-2 bg-slate-900 md:flex-col items-center ">
         <GiMeal size={100} className='p-2'/>
         <div className="flex flex-col pl-3">
@@ -86,13 +92,41 @@ const Three = () => {
   )
 }
 
+const Feature = ({img, header, text})=>{
+  return(
+    <div className="flex">
+      <div className=''>
+        <img src={img} alt={header} />
+        <CgGym size={75} />
+      </div>
+      <div>
+        <h1>{header}</h1>
+        <p>{text}</p>
+      </div>
+    </div>
+  )
+}
+
+const Benifits = () => {
+  return(
+    <div className="my-2 md:my-4">
+      <h2 className="text-red-600 font-bold text-center">Why Choose Us?</h2>
+      <h1 className="text-3xl text-red-600 text-center font-bold">Why Chosse Us?</h1>
+      <div className="flex">
+        <Feature img={f1} header="Header" text='lorem'/>
+      </div>  
+
+    </div>
+  )
+}
+
 function Home() {
   return(
     <div className='max-w-1200 mx-auto'>
 
-      <div className="w-screen h-[700px] md:before:opacity-30 before:opacity-0 md:bg-[url('./img/carousel-1.jpg')] bg-cover bg-no-repeat bg-center fade">
+      <div className="h-[700px] md:before:opacity-30 before:opacity-0 md:bg-[url('./img/carousel-1.jpg')] bg-cover bg-no-repeat bg-center fade">
         <Nav />
-        <div className="relative mx-auto h-full flex flex-col items-center justify-center text-center w-screen bg-[url('./img/carousel-1.jpg')] md:bg-none bg-cover bg-center fade md:before:opacity-0">
+        <div className="relative mx-auto h-full flex flex-col items-center justify-center text-center w-full bg-[url('./img/carousel-1.jpg')] md:bg-none bg-cover bg-center fade md:before:opacity-0">
             <h3 className='relative text-2xl text-red-600 font-bold'>Gym & Fitness Center</h3>
             <h1 className='relative text-[350%] text-[#ddd] font-mono font-semibold py-6'>Get Body In Town</h1>
             <button className='relative btn'>Join Us Now</button>
@@ -102,6 +136,7 @@ function Home() {
       <Blocks />   
       <Crew /> 
       <Three />
+      <Benifits />
 
     </div>
   )
