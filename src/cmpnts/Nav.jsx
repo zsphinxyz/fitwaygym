@@ -31,7 +31,7 @@ const Nav = () => {
         </div>
     </div>
 
-    <div className={`${nav ? 'block' : 'hidden'} w-screen absolute top-24 before:content-[""] before:w-screen before:h-screen before:bg-slate-900 before:opacity-60 before:absolute before:left-0 before:top-0`}>
+    <div className={`${nav ? 'block' : 'hidden'} w-full absolute top-24 before:content-[""] before:w-full before:h-full before:bg-slate-900 before:opacity-60 before:absolute before:left-0 before:top-0`}>
         <ul className='flex w-4/6 bg-slate-900 text-white flex-col justify-around items-center z-50 absolute right-0'>
             <li className='hover:text-red-500 py-8 text-center hover:bg-slate-500 w-full transition text-xl'><a href="Home">Home</a></li>
             <li className='hover:text-red-500 py-8 text-center hover:bg-slate-500 w-full transition text-xl'><a href="About">About</a></li>
