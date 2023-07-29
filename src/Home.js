@@ -94,14 +94,15 @@ const Three = () => {
 
 const Feature = ({img, header, text})=>{
   return(
-    <div className="flex">
-      <div className=''>
-        <img src={img} alt={header} />
-        <CgGym size={75} />
+    <div className="sm:flex sm:my-8 lg:w-1/2">
+      <div className='relative'>
+        <img src={img} alt={header} className='w-[600px] lg:w-[500px]' />
+        <CgGym size={50} className="absolute top-[-15px] right-[-15px] bg-red-600 p-3 text-white" />
       </div>
-      <div>
-        <h1>{header}</h1>
-        <p>{text}</p>
+
+      <div className="flex justify-center flex-col p-3 mb-8 lg:mb-0 ml-4">
+        <h1 className=' text-lg font-extrabold '>{header}</h1>
+        <p className=' text-slate-700'>{text}</p>
       </div>
     </div>
   )
@@ -109,19 +110,34 @@ const Feature = ({img, header, text})=>{
 
 const Benifits = () => {
   return(
-    <div className="my-2 md:my-4">
+    <div className="my-2 lg:w-[95%] md:mx-auto md:p-10 ">
       <h2 className="text-red-600 font-bold text-center">Why Choose Us?</h2>
-      <h1 className="text-3xl text-red-600 text-center font-bold">Why Chosse Us?</h1>
-      <div className="flex">
-        <Feature img={f1} header="Header" text='lorem'/>
+      <h1 className="text-3xl text-red-600 text-center font-bold">Benifits Of Joining Our GYM</h1>
+      <div className="flex p-10 lg:p-1 flex-col md:flex-wrap md:flex-row">
+        <Feature img={f1} header="Videos Instruction" text='Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor'/>
+        <Feature img={f2} header="Training Calendar" text='Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor'/>
+        <Feature img={f3} header="Free Apps & WiFi" text='Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor'/>
+        <Feature img={f4} header="Community Support" text='Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor'/>
       </div>  
 
     </div>
   )
 }
 
-function Home() {
+const Newsletter = ()=> {
   return(
+    <div className=" bg-[url('./img/feature-1.jpg')] bg-cover bg-no-repeat bg-center py-4 overflow-hidden md:flex md:justify-center md:flex-col">
+      <h1 className="text-white font-extrabold text-xl text-center">Subscribe Our Newsletter</h1>
+      <p className=" text-slate-300 text-center my-3">Subscribe and get Our latest article in your inbox</p>
+      <input type="text" placeholder='Your Email' className='block md:inline md:float-right px-1 py-2 mx-auto text-center my-3 w-[80%] max-w-[300px]'/>
+      <button className='bg-red-600 text-white p-2 block md:inline mx-auto hover:bg-slate-200 hover:text-slate-900 transition-all'>Subscribe</button>
+    </div>
+  )
+}
+
+
+function Home() {
+  return(   
     <div className='max-w-1200 mx-auto'>
 
       <div className="h-[700px] md:before:opacity-30 before:opacity-0 md:bg-[url('./img/carousel-1.jpg')] bg-cover bg-no-repeat bg-center fade">
@@ -137,6 +153,8 @@ function Home() {
       <Crew /> 
       <Three />
       <Benifits />
+0
+      <Newsletter />
 
     </div>
   )
