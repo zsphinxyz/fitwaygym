@@ -138,7 +138,21 @@ const Newsletter = ()=> {
 function Footer() {
 	return(
 	<div className="w-full h-[200px] bg-slate-900">
-	 <h1 className="text-white text-2xl">This is the Footer of the PAGE.</h1>
+	 <h1 className="text-center text-white text-2xl">Contact</h1>
+		<div className='flex w-full flex-row items-center justify-around'>
+
+		<div className='flex-1 '>
+		 <h1 className='text-3xl font-extrabold pl-2 text-white'> Fitway </h1>
+		</div>
+
+    <ul className="flex flex-col text-white flex-1">
+		 <li> Facebook </li>
+		 <li> Youtube </li>
+		 <li> Twitter </li>
+		 <li> Instagram </li>
+		 <li> Github </li>
+	</ul>
+		</div>
 	</div>
 	)
 }
@@ -156,13 +170,12 @@ function Home() {
             <button className='relative btn'>Join Us Now</button>
         </div>
       </div>   
-
       <Blocks />   
       <Crew /> 
       <Three />
       <Benifits />
+	  <Newsletter />
 	  <Footer />
-
     </div>
   )
 }
