@@ -142,10 +142,10 @@ function Footer() {
 		<div className='flex w-full flex-row items-center justify-around'>
 
 		<div className='flex-1 '>
-		 <h1 className='text-3xl font-extrabold pl-2 text-white'> Fitway </h1>
+		 <h1 className='text-3xl text-center font-extrabold pl-2 text-white'> Fitway </h1>
 		</div>
 
-    <ul className="flex flex-col text-white flex-1">
+    <ul className="flex flex-col text-white flex-1 justify-center items-center">
 		 <li> Facebook </li>
 		 <li> Youtube </li>
 		 <li> Twitter </li>
@@ -167,9 +167,10 @@ function Home() {
         <div className="relative mx-auto h-full flex flex-col items-center justify-center text-center w-full bg-[url('./img/carousel-1.jpg')] md:bg-none bg-cover bg-center fade md:before:opacity-0">
             <h3 className='relative text-2xl text-red-600 font-bold'>Gym & Fitness Center</h3>
             <h1 className='relative text-[350%] text-[#ddd] font-mono font-semibold py-6'>Get Body In Town</h1>
-            <button className='relative btn'>Join Us Now</button>
+    <button className='relative btn'>Join Us Now</button>
         </div>
       </div>   
+
       <Blocks />   
       <Crew /> 
       <Three />
@@ -181,3 +182,6 @@ function Home() {
 }
 
 export default Home;
+
+
+
