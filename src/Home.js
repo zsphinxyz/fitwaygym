@@ -135,6 +135,14 @@ const Newsletter = ()=> {
   )
 }
 
+function Footer() {
+	return(
+	<div className="w-full h-[200px] bg-slate-900">
+	 <h1 className="text-white text-2xl">This is the Footer of the PAGE.</h1>
+	</div>
+	)
+}
+
 
 function Home() {
   return(   
@@ -153,8 +161,7 @@ function Home() {
       <Crew /> 
       <Three />
       <Benifits />
-0
-      <Newsletter />
+	  <Footer />
 
     </div>
   )
